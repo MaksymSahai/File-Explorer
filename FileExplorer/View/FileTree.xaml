@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="FileExplorer.View.FileTree"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Views="clr-namespace:FileExplorer.View"
+             xmlns:local="clr-namespace:FileExplorer.ViewModel">
+    <UserControl.Resources>
+        <HierarchicalDataTemplate DataType="{x:Type local:DirInfo}" ItemsSource="{Binding SubDirectories}" x:Key="treeTemplate">
+            <StackPanel Orientation="Horizontal">
+                <Image Width="20" Height="20" Stretch="Fill" x:Name="img" />
+                <TextBlock Text="{Binding Name}" Margin="5,0,0,0" />
+            </StackPanel>
+            <HierarchicalDataTemplate.Triggers>
+                <DataTrigger Binding="{Binding Path=DirType}" Value="0">
+                    <Setter Property="Image.Source" TargetName="img" Value="/Images/MyComputer.jpg"></Setter>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Path=DirType}" Value="1">
+                    <Setter Property="Image.Source" TargetName="img" Value="/Images/diskdrive.png"></Setter>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Path=DirType}" Value="2">
+                    <Setter Property="Image.Source" TargetName="img" Value="/Images/folder.png"></Setter>
+                </DataTrigger>
+            </HierarchicalDataTemplate.Triggers>
+        </HierarchicalDataTemplate>
+
+        <Style TargetType="TreeViewItem">
+            <Setter Property="IsExpanded" Value="{Binding IsExpanded, Mode=TwoWay}" />
+            <Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
+            <EventSetter Event="Expanded" Handler="TreeView_Expanded"></EventSetter>
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <TreeView x:Name="test" ItemsSource="{Binding Path=FileTreeVM.SystemDirectorySource}" ItemTemplate="{StaticResource treeTemplate}" SelectedItemChanged="TreeView_SelectedItemChanged"  >
+            <!--<TreeView.ItemTemplate>
+                <HierarchicalDataTemplate ItemsSource="{Binding SubDirectories}">
+                    <Border>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="{Binding ImagePath}" Width="20" Height="20"></Image>
+                            <TextBlock Text="{Binding Name}"/>
+                        </StackPanel>
+                    </Border>
+                </HierarchicalDataTemplate>
+            </TreeView.ItemTemplate>-->
+        </TreeView>
+    </Grid>
+   
+</UserControl>

@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="FileExplorer.App" Collapsed="true">
+    <Position X="14.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FileExplorer.Model.FileSystemExplorerService">
+    <Position X="10.25" Y="7.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAgAAAAAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\FileSystemExplorerService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FileExplorer.Properties.Resources" Collapsed="true">
+    <Position X="14.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEBEAAAQQAAAAIAABAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FileExplorer.Properties.Settings" Collapsed="true">
+    <Position X="13.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FileExplorer.View.DirectoryViewer">
+    <Position X="16.25" Y="3" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAIAAACgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\DirectoryViewer.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FileExplorer.View.ExplorerWindow" Collapsed="true">
+    <Position X="14.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\ExplorerWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FileExplorer.View.FileSystemTree" Collapsed="true">
+    <Position X="11.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAgAAAAABAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>View\FileSystemTree.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FileExplorer.ViewModel.DirectoryViewerViewModel">
+    <Position X="3.25" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAAgAAAAAAABAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>ViewModel\DirectoryViewerViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FileExplorer.ViewModel.DirInfo">
+    <Position X="8.25" Y="2.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AEAGAQAAAAAAkCIAAAAAAgQAAAEAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\DirInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FileExplorer.ViewModel.ExplorerWindowViewModel">
+    <Position X="0.5" Y="3.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAIAAAAAEAAAgAEAgAApAAAABAAAABAAAAoA=</HashCode>
+      <FileName>ViewModel\ExplorerWindowViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FileExplorer.ViewModel.FileExplorerViewModel">
+    <Position X="5.5" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AABEAAAEAAAAAAAAAAAAAAAAAAAAAAACAAAACAACAAA=</HashCode>
+      <FileName>ViewModel\FileExplorerViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FileExplorer.ViewModel.RelayCommand" BaseTypeListCollapsed="true">
+    <Position X="16.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEACAAQAAECAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\RelayCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="FileExplorer.ViewModel.GetFileSysemInformationConverter" BaseTypeListCollapsed="true">
+    <Position X="7.25" Y="8" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\ValueConverters.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="FileExplorer.ViewModel.ControlVisibilityConverter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\ValueConverters.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="FileExplorer.ViewModel.ViewModelBase">
+    <Position X="3.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\ViewModelBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Enum Name="FileExplorer.ViewModel.ObjectType">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAAIAAAAAEAAACAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\DirInfo.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

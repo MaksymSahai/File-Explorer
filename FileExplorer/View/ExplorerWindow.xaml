@@ -1,0 +1,32 @@
+﻿<Window x:Class="FileExplorer.View.ExplorerWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Views="clr-namespace:FileExplorer.View"
+    xmlns:local="clr-namespace:FileExplorer.ViewModel"
+    Icon="/Images/explorer.jpg"
+    Title="{Binding Path=CurrentDirectory.Name}" Width="Auto" Height="Auto">
+    <Window.Resources>
+        <!--<local:ControlVisibilityConverter x:Key="VisibilityConverter" />-->
+        <BooleanToVisibilityConverter x:Key="BoolVisibilityConverter"></BooleanToVisibilityConverter>
+    </Window.Resources>
+    <Grid x:Name="OuterGrid" DataContext="{Binding}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition  />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="5"></RowDefinition>
+        </Grid.RowDefinitions>
+        <!--Display the DirectoryTree on the left side of the grid-->
+        <Views:FileSystemTree Grid.Column="0" Grid.Row="0"  Visibility="{Binding Path=ShowDirectoryTree, Converter={StaticResource BoolVisibilityConverter}}"> </Views:FileSystemTree>
+
+        <!-- pane splitter-->
+        <GridSplitter Grid.Column="0" Grid.Row="0" HorizontalAlignment="Right" Width="3" Background="Gray" Visibility="{Binding Path=ShowDirectoryTree, Converter={StaticResource BoolVisibilityConverter}}" />
+
+        <!--Display the File and Directory Selector on the right side of the grid-->
+        <ScrollViewer Grid.Column="1" Grid.Row="0">
+            <Views:DirectoryViewer></Views:DirectoryViewer>
+        </ScrollViewer>
+    </Grid>
+</Window>
